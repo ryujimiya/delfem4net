@@ -1,0 +1,115 @@
+﻿////////////////////////////////////////////////////////////////////////////////
+DelFEM4Net
+
+  created by ryujimiya (りゅうじみや)
+  e-mail: ryujimiya（あっと）mail.goo.ne.jp
+  original DelFEM codes created by Nobuyuki Umetani
+////////////////////////////////////////////////////////////////////////////////
+version1.0.0.8
+(2013-06-13)
+  Visual Studio 2012でビルド
+
+version1.0.0.7
+(2012-12-19)
+  DelFEM1.2.3Modified_20121219 のスタティックライブラリをリンク
+  (CZMatDia_BlkCrs::AddPatternのnativeライブラリ修正)
+
+version1.0.0.6
+(2012-10-13)
+  CZVector_Blk::AXPYの戻り値を自分自身に変更（新たにインスタンスを生成しない)
+  CBCFlg_Ptrを追加
+  CLinearSystemなどの下記更新用I/Fを追加 ※本家では更新可能だったが、DelFEM4Netでは読み取り用しか提供していなかったのを解消。
+      ●CLinearSystem
+      DelFEM4NetMatVec::CMatDia_BlkCrs_Ptr^ CLinearSystem::GetMatrixPtr(unsigned int ilss);
+          --> すでにあったが、publicなメンバ変数を直接参照する実装だったのでそちらは名称を変更
+          DelFEM4NetMatVec::CMatDia_BlkCrs_Ptr^ CLinearSystem::GetMatrixPtr_DirectAccess(unsigned int ilss);
+      DelFEM4NetMatVec::CMat_BlkCrs_Ptr^ CLinearSystem::GetMatrixPtr(unsigned int ilss, unsigned int jlss);
+         --> すでにあったがpublicなメンバ変数を直接参照する実装だったのでそちらは名称を変更
+          DelFEM4NetMatVec::CMat_BlkCrs_Ptr^ CLinearSystem::GetMatrixPtr_DirectAccess(unsigned int ilss, unsigned int jlss);
+      DelFEM4NetMatVec::CVector_Blk_Ptr^ CLinearSystem::GetVectorPtr(int iv, unsigned int ilss);
+      DelFEM4NetMatVec::CBCFlag^ CLinearSystem::GetBCFlagPtr(unsigned int ilss);
+      ●CLinearSystem_Save
+      DelFEM4NetMatVec::CMat_BlkCrs_Ptr^ CLinearSystem_Save::GetMatrixPtr_Boundary(
+          unsigned int id_field_col, DelFEM4NetFem::Field::ELSEG_TYPE elseg_type_col,
+          unsigned int id_field_row, DelFEM4NetFem::Field::ELSEG_TYPE elseg_type_row,
+          DelFEM4NetFem::Field::CFieldWorld^ world);
+      DelFEM4NetMatVec::CVector_Blk_Ptr^ CLinearSystem_Save::GetForcePtr(
+          unsigned int id_field, DelFEM4NetFem::Field::ELSEG_TYPE elseg_type,
+          DelFEM4NetFem::Field::CFieldWorld^ world);
+      ●CLinearSystem_Field
+          DelFEM4NetMatVec::CVector_Blk_Ptr^ CLinearSystem_Field::GetResidualPtr(unsigned int id_field, DelFEM4NetFem::Field::ELSEG_TYPE elseg_type, DelFEM4NetFem::Field::CFieldWorld^ world);
+          DelFEM4NetMatVec::CVector_Blk_Ptr^ CLinearSystem_Field::GetUpdatePtr(  unsigned int id_field, DelFEM4NetFem::Field::ELSEG_TYPE elseg_type, DelFEM4NetFem::Field::CFieldWorld^ world);
+          DelFEM4NetMatVec::CMatDia_BlkCrs_Ptr^ CLinearSystem_Field::GetMatrixPtr
+              (unsigned int id_field, DelFEM4NetFem::Field::ELSEG_TYPE elseg_type, DelFEM4NetFem::Field::CFieldWorld^ world);
+          DelFEM4NetMatVec::CMat_BlkCrs_Ptr^ CLinearSystem_Field::GetMatrixPtr
+              (unsigned int id_field_col, DelFEM4NetFem::Field::ELSEG_TYPE elseg_type_col,
+               unsigned int id_field_row, DelFEM4NetFem::Field::ELSEG_TYPE elseg_type_row,
+               DelFEM4NetFem::Field::CFieldWorld^ world);
+
+version1.0.0.5
+(2012-10-12)
+  不具合修正
+    MatVecメソッドで alpha * [A]{x} + beta *{y}のyをnativeに渡すとき、nativeのコピーを作成してから渡していたがそれを止めた。
+    (Lsの更新ベクトルを書き換えるときとか、nativeインスタンスをそのままにしてほしいので)
+    CZMat_BlkCrs::MatVec
+    CZMatDia_BlkCrs::MatVec
+    CZMatDia_BlkCrs::MatVec_Hermitian
+    CMat_BlkCrs::MatVec
+    CMatDia_BlkCrs::MatVec
+    CDiaMat_Blk::MatVec
+
+version1.0.0.4
+(2012-10-06)
+    CEqnSystem_Scalar2D::SetSourceの実装ミス修正
+
+version1.0.0.3
+(2012-10-04)
+    rigid 剛体解析ライブラリに対応
+
+(2012-10-03)
+    CURVE_TYPEをenum → public enum classに修正
+        ＜影響する関数＞
+        include/DelFEM4Net/cad2d.h
+            CCadObj2D
+                virtual DelFEM4NetCad::CURVE_TYPE GetEdgeCurveType(const unsigned int id_e);
+                CResAddPolygon^ AddLoop(IList<DelFEM4NetCom::Pair<DelFEM4NetCad::CURVE_TYPE, IList<double>^>^>^ aVal);  //!< id_l = 0, scale = 1
+                CResAddPolygon^ AddLoop(IList<DelFEM4NetCom::Pair<DelFEM4NetCad::CURVE_TYPE, IList<double>^>^>^ aVal, unsigned int id_l); //!< scale = 1
+                CResAddPolygon^ AddLoop(IList<DelFEM4NetCom::Pair<DelFEM4NetCad::CURVE_TYPE, IList<double>^>^>^ aVal, unsigned int id_l, double scale);
+        include/DelFEM4Net/cad/cad_elem2d.h
+            CEdge2D
+                DelFEM4NetCad::CURVE_TYPE GetCurveType();
+
+    CVector2Dの演算子 +, - を追加
+      CVector2D同士の加算、減算がC#から使用できなかったのを修正。
+
+version1.0.0.2
+(2012-9-28)
+  CZMatDia_BlkCrs::MeargeのCom::Complex配列delete忘れFIX (サンプルアプリでメモリが足りなくなっていた原因だと思われます
+  CFieldWorldの要素アレイ、節点アレイ、フィールドの取得で書き込み用の取得I/Fを追加
+    (native側では、インスタンスのリファレンスを取得するI/Fがあったが、DelFEM4Netでは対応していなかったので追加しました))
+
+version1,0.0.1
+(2012-9-23)
+  メソッドのI/FでListをIListに変更
+
+version1.0.0.0
+(2012-9-22)
+  バージョンを入れた。けれども反映されない。
+
+(2012-8-27)
+  H面導波管シミュレータ用に機能追加
+   CadObj2Dで辺の色、頂点の色を設定できるようにしました。
+   これにより、
+
+(2012-8-22)
+  作成再開
+
+(2012-2-8)
+  作成中断
+
+(2012-1-23)
+  C#からDelFEMを触ってみたいと思い作成開始
+  DelFEMは、パッケージ
+    DelFEM1.2.3.zip
+  を使用。
+

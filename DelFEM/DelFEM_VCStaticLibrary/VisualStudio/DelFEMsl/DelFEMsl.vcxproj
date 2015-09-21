@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9B964B09-C498-4A9A-AA70-3023BD9F8988}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DelFEMsl</RootNamespace>
+    <ProjectName>DelFEMsl</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;__VISUALC__;_CRT_SECURE_NO_WARNINGS;_ALLOW_KEYWORD_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <OmitFramePointers>false</OmitFramePointers>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;__VISUALC__;_CRT_SECURE_NO_WARNINGS;_ALLOW_KEYWORD_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+      <FloatingPointExceptions>
+      </FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\cad\brep.cpp" />
+    <ClCompile Include="..\..\src\cad\brep2d.cpp" />
+    <ClCompile Include="..\..\src\cad\cad_edge2d_polyline.cpp" />
+    <ClCompile Include="..\..\src\cad\cad_elem2d.cpp" />
+    <ClCompile Include="..\..\src\cad\cad_elem3d.cpp" />
+    <ClCompile Include="..\..\src\cad\cad_obj2d.cpp" />
+    <ClCompile Include="..\..\src\cad\cad_obj2d_move.cpp" />
+    <ClCompile Include="..\..\src\cad\cad_obj3d.cpp" />
+    <ClCompile Include="..\..\src\cad\cad_svg.cpp" />
+    <ClCompile Include="..\..\src\cad\drawer_cad.cpp" />
+    <ClCompile Include="..\..\src\cad\drawer_cad3d.cpp" />
+    <ClCompile Include="..\..\src\com\drawer.cpp" />
+    <ClCompile Include="..\..\src\com\drawer_gl_utility.cpp" />
+    <ClCompile Include="..\..\src\com\quaternion.cpp" />
+    <ClCompile Include="..\..\src\com\spatial_hash_grid2d.cpp" />
+    <ClCompile Include="..\..\src\com\spatial_hash_grid3d.cpp" />
+    <ClCompile Include="..\..\src\com\tri_ary_topology.cpp" />
+    <ClCompile Include="..\..\src\com\uglyfont.cpp" />
+    <ClCompile Include="..\..\src\com\vector3d.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqnsys.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqnsys_fluid.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqnsys_scalar.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqnsys_shell.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqnsys_solid.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_advection_diffusion.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_diffusion.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_dkt.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_helmholtz.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_hyper.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_linear_solid2d.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_linear_solid3d.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_navier_stokes.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_poisson.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_stokes.cpp" />
+    <ClCompile Include="..\..\src\femeqn\eqn_st_venant.cpp" />
+    <ClCompile Include="..\..\src\femeqn\ker_emat_tri.cpp" />
+    <ClCompile Include="..\..\src\femfield\drawer_field.cpp" />
+    <ClCompile Include="..\..\src\femfield\drawer_field_edge.cpp" />
+    <ClCompile Include="..\..\src\femfield\drawer_field_face.cpp" />
+    <ClCompile Include="..\..\src\femfield\drawer_field_image_based_flow_vis.cpp" />
+    <ClCompile Include="..\..\src\femfield\drawer_field_streamline.cpp" />
+    <ClCompile Include="..\..\src\femfield\drawer_field_vector.cpp" />
+    <ClCompile Include="..\..\src\femfield\elem_ary.cpp" />
+    <ClCompile Include="..\..\src\femfield\eval.cpp" />
+    <ClCompile Include="..\..\src\femfield\field.cpp" />
+    <ClCompile Include="..\..\src\femfield\field_value_setter.cpp" />
+    <ClCompile Include="..\..\src\femfield\field_world.cpp" />
+    <ClCompile Include="..\..\src\femfield\node_ary.cpp" />
+    <ClCompile Include="..\..\src\femls\linearsystem_field.cpp" />
+    <ClCompile Include="..\..\src\femls\linearsystem_fieldsave.cpp" />
+    <ClCompile Include="..\..\src\femls\zlinearsystem.cpp" />
+    <ClCompile Include="..\..\src\femls\zsolver_ls_iter.cpp" />
+    <ClCompile Include="..\..\src\ls\eigen_lanczos.cpp" />
+    <ClCompile Include="..\..\src\ls\linearsystem.cpp" />
+    <ClCompile Include="..\..\src\ls\preconditioner.cpp" />
+    <ClCompile Include="..\..\src\ls\solver_ls_iter.cpp" />
+    <ClCompile Include="..\..\src\matvec\matdiafrac_blkcrs.cpp" />
+    <ClCompile Include="..\..\src\matvec\matdiainv_blkdia.cpp" />
+    <ClCompile Include="..\..\src\matvec\matdia_blkcrs.cpp" />
+    <ClCompile Include="..\..\src\matvec\matfrac_blkcrs.cpp" />
+    <ClCompile Include="..\..\src\matvec\matprolong_blkcrs.cpp" />
+    <ClCompile Include="..\..\src\matvec\mat_blkcrs.cpp" />
+    <ClCompile Include="..\..\src\matvec\ordering_blk.cpp" />
+    <ClCompile Include="..\..\src\matvec\solver_mat_iter.cpp" />
+    <ClCompile Include="..\..\src\matvec\solver_mg.cpp" />
+    <ClCompile Include="..\..\src\matvec\vector_blk.cpp" />
+    <ClCompile Include="..\..\src\matvec\zmatdiafrac_blkcrs.cpp" />
+    <ClCompile Include="..\..\src\matvec\zmatdia_blkcrs.cpp" />
+    <ClCompile Include="..\..\src\matvec\zmat_blkcrs.cpp" />
+    <ClCompile Include="..\..\src\matvec\zsolver_mat_iter.cpp" />
+    <ClCompile Include="..\..\src\matvec\zvector_blk.cpp" />
+    <ClCompile Include="..\..\src\msh\drawer_msh.cpp" />
+    <ClCompile Include="..\..\src\msh\mesh3d.cpp" />
+    <ClCompile Include="..\..\src\msh\mesh3d_extrude.cpp" />
+    <ClCompile Include="..\..\src\msh\mesher2d.cpp" />
+    <ClCompile Include="..\..\src\msh\mesher2d_edit.cpp" />
+    <ClCompile Include="..\..\src\msh\mesher3d.cpp" />
+    <ClCompile Include="..\..\src\msh\meshkernel2d.cpp" />
+    <ClCompile Include="..\..\src\msh\meshkernel3d.cpp" />
+    <ClCompile Include="..\..\src\msh\surface_mesh_reader.cpp" />
+    <ClCompile Include="..\..\src\rigid\linearsystem_rigid.cpp" />
+    <ClCompile Include="..\..\src\rigid\linearsystem_rigidfield.cpp" />
+    <ClCompile Include="..\..\src\rigid\rigidbody.cpp" />
+    <ClCompile Include="..\..\src\stub\vsualc_stub.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\delfem\cad2d_interface.h" />
+    <ClInclude Include="..\..\include\delfem\cad\brep.h" />
+    <ClInclude Include="..\..\include\delfem\cad\brep2d.h" />
+    <ClInclude Include="..\..\include\delfem\cad\cad_edge2d_polyline.h" />
+    <ClInclude Include="..\..\include\delfem\cad\cad_elem2d.h" />
+    <ClInclude Include="..\..\include\delfem\cad\cad_elem3d.h" />
+    <ClInclude Include="..\..\include\delfem\cad\cad_svg.h" />
+    <ClInclude Include="..\..\include\delfem\cad\objset_cad.h" />
+    <ClInclude Include="..\..\include\delfem\cad_com.h" />
+    <ClInclude Include="..\..\include\delfem\cad_obj2d.h" />
+    <ClInclude Include="..\..\include\delfem\cad_obj2d_move.h" />
+    <ClInclude Include="..\..\include\delfem\cad_obj3d.h" />
+    <ClInclude Include="..\..\include\delfem\camera.h" />
+    <ClInclude Include="..\..\include\delfem\complex.h" />
+    <ClInclude Include="..\..\include\delfem\drawer.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_cad.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_cad3d.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_field.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_field_edge.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_field_face.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_field_image_based_flow_vis.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_field_streamline.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_field_vector.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_gl_utility.h" />
+    <ClInclude Include="..\..\include\delfem\drawer_msh.h" />
+    <ClInclude Include="..\..\include\delfem\elem_ary.h" />
+    <ClInclude Include="..\..\include\delfem\eqnsys.h" />
+    <ClInclude Include="..\..\include\delfem\eqnsys_fluid.h" />
+    <ClInclude Include="..\..\include\delfem\eqnsys_scalar.h" />
+    <ClInclude Include="..\..\include\delfem\eqnsys_shell.h" />
+    <ClInclude Include="..\..\include\delfem\eqnsys_solid.h" />
+    <ClInclude Include="..\..\include\delfem\eval.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_advection_diffusion.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_diffusion.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_dkt.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_helmholtz.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_hyper.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_linear_solid2d.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_linear_solid3d.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_navier_stokes.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_poisson.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_stokes.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_st_venant.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_bar.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_hex.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_quad.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_tet.h" />
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_tri.h" />
+    <ClInclude Include="..\..\include\delfem\femls\linearsystem_field.h" />
+    <ClInclude Include="..\..\include\delfem\femls\linearsystem_fieldsave.h" />
+    <ClInclude Include="..\..\include\delfem\femls\zlinearsystem.h" />
+    <ClInclude Include="..\..\include\delfem\femls\zpreconditioner.h" />
+    <ClInclude Include="..\..\include\delfem\femls\zsolver_ls_iter.h" />
+    <ClInclude Include="..\..\include\delfem\field.h" />
+    <ClInclude Include="..\..\include\delfem\field_value_setter.h" />
+    <ClInclude Include="..\..\include\delfem\field_world.h" />
+    <ClInclude Include="..\..\include\delfem\glut_utility.h" />
+    <ClInclude Include="..\..\include\delfem\indexed_array.h" />
+    <ClInclude Include="..\..\include\delfem\linearsystem_interface_eqnsys.h" />
+    <ClInclude Include="..\..\include\delfem\ls\eigen_lanczos.h" />
+    <ClInclude Include="..\..\include\delfem\ls\linearsystem.h" />
+    <ClInclude Include="..\..\include\delfem\ls\linearsystem_interface_solver.h" />
+    <ClInclude Include="..\..\include\delfem\ls\preconditioner.h" />
+    <ClInclude Include="..\..\include\delfem\ls\solver_ls_iter.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\bcflag_blk.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\diamat_blk.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\ker_mat.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\matdiafrac_blkcrs.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\matdiainv_blkdia.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\matdia_blkcrs.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\matfrac_blkcrs.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\matprecond_blk.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\matprolong_blkcrs.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\mat_blkcrs.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\ordering_blk.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\solver_mat_iter.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\solver_mg.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\vector_blk.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\zmatdiafrac_blkcrs.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\zmatdia_blkcrs.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\zmatprecond_blk.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\zmat_blkcrs.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\zsolver_mat_iter.h" />
+    <ClInclude Include="..\..\include\delfem\matvec\zvector_blk.h" />
+    <ClInclude Include="..\..\include\delfem\mesh3d.h" />
+    <ClInclude Include="..\..\include\delfem\mesher2d.h" />
+    <ClInclude Include="..\..\include\delfem\mesher2d_edit.h" />
+    <ClInclude Include="..\..\include\delfem\mesh_interface.h" />
+    <ClInclude Include="..\..\include\delfem\mesh_primitive.h" />
+    <ClInclude Include="..\..\include\delfem\msh\meshkernel2d.h" />
+    <ClInclude Include="..\..\include\delfem\msh\meshkernel3d.h" />
+    <ClInclude Include="..\..\include\delfem\msh\surface_mesh_reader.h" />
+    <ClInclude Include="..\..\include\delfem\node_ary.h" />
+    <ClInclude Include="..\..\include\delfem\objset.h" />
+    <ClInclude Include="..\..\include\delfem\quaternion.h" />
+    <ClInclude Include="..\..\include\delfem\rigid\linearsystem_rigid.h" />
+    <ClInclude Include="..\..\include\delfem\rigid\linearsystem_rigidfield.h" />
+    <ClInclude Include="..\..\include\delfem\rigid\rigidbody.h" />
+    <ClInclude Include="..\..\include\delfem\serialize.h" />
+    <ClInclude Include="..\..\include\delfem\spatial_hash_grid2d.h" />
+    <ClInclude Include="..\..\include\delfem\spatial_hash_grid3d.h" />
+    <ClInclude Include="..\..\include\delfem\stub\visualc_stub.h" />
+    <ClInclude Include="..\..\include\delfem\tri_ary_topology.h" />
+    <ClInclude Include="..\..\include\delfem\uglyfont.h" />
+    <ClInclude Include="..\..\include\delfem\vector2d.h" />
+    <ClInclude Include="..\..\include\delfem\vector3d.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

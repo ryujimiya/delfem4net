@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\cad">
+      <UniqueIdentifier>{d44e785a-54b5-4b44-8085-f5c7e67ffc9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\com">
+      <UniqueIdentifier>{d909a5e5-5b17-4916-9bee-79dda0658746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\femeqn">
+      <UniqueIdentifier>{c6fcdeec-088e-4171-9283-4ddd3e456fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\femfield">
+      <UniqueIdentifier>{0e5839d8-a69a-463d-ba59-f4c693aa78ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\femls">
+      <UniqueIdentifier>{1e9a97c5-b83e-403e-bec4-ef67e6586782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ls">
+      <UniqueIdentifier>{6bb90449-b7fd-4c39-bf04-aaee476d37c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\matvec">
+      <UniqueIdentifier>{5e815077-d753-462e-ad56-00ea9edca99c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\msh">
+      <UniqueIdentifier>{366b83b1-6099-4931-ac81-d85c5332f9ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\rigid">
+      <UniqueIdentifier>{cce41a47-526b-4018-be5a-a43fedd95491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem">
+      <UniqueIdentifier>{7f5def65-5924-4dcd-b6b4-d4e26a960638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem\cad">
+      <UniqueIdentifier>{2d52ecd0-5909-4a2a-9766-b715625cad5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem\femeqn">
+      <UniqueIdentifier>{4d88c374-3c7c-473e-975d-14687aea5c9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem\femls">
+      <UniqueIdentifier>{38d11601-89fb-4c15-a964-093adce25712}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem\ls">
+      <UniqueIdentifier>{3809ff82-6379-4479-9d9d-ca1e5933f3cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem\matvec">
+      <UniqueIdentifier>{79fbee41-196c-41ae-b289-6fb19b4e5614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem\msh">
+      <UniqueIdentifier>{d2810e9d-7eea-4a1b-beda-745e9af4c54e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem\rigid">
+      <UniqueIdentifier>{148ecb38-a4f4-4664-b34a-a2497dff65d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\delfem\stub">
+      <UniqueIdentifier>{abe7f861-e696-43ff-baaf-b7350dce655b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\stub">
+      <UniqueIdentifier>{d7772427-3260-48e5-90db-16e8363a9e57}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\cad\brep.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\brep2d.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\cad_edge2d_polyline.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\cad_elem2d.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\cad_elem3d.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\cad_obj2d.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\cad_obj2d_move.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\cad_obj3d.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\cad_svg.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\drawer_cad.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cad\drawer_cad3d.cpp">
+      <Filter>ソース ファイル\cad</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\com\drawer.cpp">
+      <Filter>ソース ファイル\com</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\com\drawer_gl_utility.cpp">
+      <Filter>ソース ファイル\com</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\com\quaternion.cpp">
+      <Filter>ソース ファイル\com</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\com\spatial_hash_grid2d.cpp">
+      <Filter>ソース ファイル\com</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\com\spatial_hash_grid3d.cpp">
+      <Filter>ソース ファイル\com</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\com\tri_ary_topology.cpp">
+      <Filter>ソース ファイル\com</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\com\uglyfont.cpp">
+      <Filter>ソース ファイル\com</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\com\vector3d.cpp">
+      <Filter>ソース ファイル\com</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_advection_diffusion.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_diffusion.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_dkt.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_helmholtz.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_hyper.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_linear_solid2d.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_linear_solid3d.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_navier_stokes.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_poisson.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_st_venant.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqn_stokes.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqnsys.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqnsys_fluid.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqnsys_scalar.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqnsys_shell.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\eqnsys_solid.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femeqn\ker_emat_tri.cpp">
+      <Filter>ソース ファイル\femeqn</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\drawer_field.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\drawer_field_edge.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\drawer_field_face.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\drawer_field_image_based_flow_vis.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\drawer_field_streamline.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\drawer_field_vector.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\elem_ary.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\eval.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\field.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\field_value_setter.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\field_world.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femfield\node_ary.cpp">
+      <Filter>ソース ファイル\femfield</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femls\linearsystem_field.cpp">
+      <Filter>ソース ファイル\femls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femls\linearsystem_fieldsave.cpp">
+      <Filter>ソース ファイル\femls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femls\zlinearsystem.cpp">
+      <Filter>ソース ファイル\femls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\femls\zsolver_ls_iter.cpp">
+      <Filter>ソース ファイル\femls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls\eigen_lanczos.cpp">
+      <Filter>ソース ファイル\ls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls\linearsystem.cpp">
+      <Filter>ソース ファイル\ls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls\preconditioner.cpp">
+      <Filter>ソース ファイル\ls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ls\solver_ls_iter.cpp">
+      <Filter>ソース ファイル\ls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\mat_blkcrs.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\matdia_blkcrs.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\matdiafrac_blkcrs.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\matdiainv_blkdia.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\matfrac_blkcrs.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\matprolong_blkcrs.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\ordering_blk.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\solver_mat_iter.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\solver_mg.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\vector_blk.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\zmat_blkcrs.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\zmatdia_blkcrs.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\zmatdiafrac_blkcrs.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\zsolver_mat_iter.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\matvec\zvector_blk.cpp">
+      <Filter>ソース ファイル\matvec</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\drawer_msh.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\mesh3d.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\mesh3d_extrude.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\mesher2d.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\mesher2d_edit.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\mesher3d.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\meshkernel2d.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\meshkernel3d.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\msh\surface_mesh_reader.cpp">
+      <Filter>ソース ファイル\msh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rigid\linearsystem_rigid.cpp">
+      <Filter>ソース ファイル\rigid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rigid\linearsystem_rigidfield.cpp">
+      <Filter>ソース ファイル\rigid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rigid\rigidbody.cpp">
+      <Filter>ソース ファイル\rigid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stub\vsualc_stub.cpp">
+      <Filter>ソース ファイル\stub</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\delfem\cad_com.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad_obj2d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad_obj2d_move.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad_obj3d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad2d_interface.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\camera.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\complex.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_cad.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_cad3d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_field.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_field_edge.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_field_face.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_field_image_based_flow_vis.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_field_streamline.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_field_vector.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_gl_utility.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\drawer_msh.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\elem_ary.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\eqnsys.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\eqnsys_fluid.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\eqnsys_scalar.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\eqnsys_shell.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\eqnsys_solid.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\eval.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\field.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\field_value_setter.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\field_world.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\glut_utility.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\indexed_array.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\linearsystem_interface_eqnsys.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\mesh_interface.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\mesh_primitive.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\mesh3d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\mesher2d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\mesher2d_edit.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\node_ary.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\objset.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\quaternion.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\serialize.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\spatial_hash_grid2d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\spatial_hash_grid3d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\tri_ary_topology.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\uglyfont.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\vector2d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\vector3d.h">
+      <Filter>ヘッダー ファイル\delfem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad\brep.h">
+      <Filter>ヘッダー ファイル\delfem\cad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad\brep2d.h">
+      <Filter>ヘッダー ファイル\delfem\cad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad\cad_edge2d_polyline.h">
+      <Filter>ヘッダー ファイル\delfem\cad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad\cad_elem2d.h">
+      <Filter>ヘッダー ファイル\delfem\cad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad\cad_elem3d.h">
+      <Filter>ヘッダー ファイル\delfem\cad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad\cad_svg.h">
+      <Filter>ヘッダー ファイル\delfem\cad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\cad\objset_cad.h">
+      <Filter>ヘッダー ファイル\delfem\cad</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_advection_diffusion.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_diffusion.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_dkt.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_helmholtz.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_hyper.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_linear_solid2d.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_linear_solid3d.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_navier_stokes.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_poisson.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_st_venant.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\eqn_stokes.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_bar.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_hex.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_quad.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_tet.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femeqn\ker_emat_tri.h">
+      <Filter>ヘッダー ファイル\delfem\femeqn</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femls\linearsystem_field.h">
+      <Filter>ヘッダー ファイル\delfem\femls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femls\linearsystem_fieldsave.h">
+      <Filter>ヘッダー ファイル\delfem\femls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femls\zlinearsystem.h">
+      <Filter>ヘッダー ファイル\delfem\femls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femls\zpreconditioner.h">
+      <Filter>ヘッダー ファイル\delfem\femls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\femls\zsolver_ls_iter.h">
+      <Filter>ヘッダー ファイル\delfem\femls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\ls\eigen_lanczos.h">
+      <Filter>ヘッダー ファイル\delfem\ls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\ls\linearsystem.h">
+      <Filter>ヘッダー ファイル\delfem\ls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\ls\linearsystem_interface_solver.h">
+      <Filter>ヘッダー ファイル\delfem\ls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\ls\preconditioner.h">
+      <Filter>ヘッダー ファイル\delfem\ls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\ls\solver_ls_iter.h">
+      <Filter>ヘッダー ファイル\delfem\ls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\bcflag_blk.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\diamat_blk.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\ker_mat.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\mat_blkcrs.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\matdia_blkcrs.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\matdiafrac_blkcrs.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\matdiainv_blkdia.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\matfrac_blkcrs.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\matprecond_blk.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\matprolong_blkcrs.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\ordering_blk.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\solver_mat_iter.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\solver_mg.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\vector_blk.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\zmat_blkcrs.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\zmatdia_blkcrs.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\zmatdiafrac_blkcrs.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\zmatprecond_blk.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\zsolver_mat_iter.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\matvec\zvector_blk.h">
+      <Filter>ヘッダー ファイル\delfem\matvec</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\msh\meshkernel2d.h">
+      <Filter>ヘッダー ファイル\delfem\msh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\msh\meshkernel3d.h">
+      <Filter>ヘッダー ファイル\delfem\msh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\msh\surface_mesh_reader.h">
+      <Filter>ヘッダー ファイル\delfem\msh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\rigid\linearsystem_rigid.h">
+      <Filter>ヘッダー ファイル\delfem\rigid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\rigid\linearsystem_rigidfield.h">
+      <Filter>ヘッダー ファイル\delfem\rigid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\rigid\rigidbody.h">
+      <Filter>ヘッダー ファイル\delfem\rigid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\delfem\stub\visualc_stub.h">
+      <Filter>ヘッダー ファイル\delfem\stub</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,221 @@
+﻿////////////////////////////////////////////////////////////////////////////////
+DelFEM4Netのサンプルアプリケーション
+
+  created by ryujimiya (りゅうじみや)
+  e-mail: ryujimiya（あっと）mail.goo.ne.jp
+  original DelFEM codes and sample codes created by Nobuyuki Umetani
+////////////////////////////////////////////////////////////////////////////////
+
+DelFEMライブラリに付属のサンプルアプリをC#に移植していきます。
+なお、本サンプルアプリではOpenGL描画ルーチンとしてTao Frameworkを使用しています。
+またOpenGLには、GL+GLU+freeglutを使用しています。
+
+■ Tao Framework
+  http://www.mono-project.com/Tao#The_Tao_Framework_for_Mono_and_.NET.
+
+■ freeglut
+  http://freeglut.sourceforge.net/
+
+■ ILNumerics(32Bit)
+  ILNumerics http://ilnumerics.net/
+  NuGet ILNumerics32Bit  http://nuget.org/packages/ILNumerics.32Bit/
+
+---履歴 ---
+(2013-07-21)
+  時間領域FEM Uniaxial PML (wg2d_td_pml)を追加
+  
+  wg2d_periodic TMモード(TEz)伝達問題でdHz/dxの計算を修正
+
+
+(2013-06-22)
+  時間領域FEMの高次ABCを不均一媒質に対応
+  誘電体スラブ導波路グレーティング サンプル
+  時間領域FEMの処理速度改善(行列とベクトルの積をnative(clapack)の関数を使用して計算)
+
+(2013-06-17)
+  wg2d_td_abc_higher_order を追加
+    時間領域FEM 高次ABC
+      Higdon型ABCを時間領域で適用しました。定式化は下記文献をベースにしています。
+
+    Dan Givoli , Beny Neta & Igor Patlashenko
+    "Finite element analysis of time-dependent semi-infinite wave-guides with high-order boundary treatment"
+    http://www.math.nps.navy.mil/~bneta/higdon_fe_pap.pdf
+    February 27, 2003
+    International Journal for Numerical Methods in Engineering
+    Volume 58, Issue 13, p.1955- 1983,
+    7 December 2003
+
+    高速フーリエ変換のライブラリを使用する為、パッケージILNumerics(32Bit)を利用していますが、容量が大きいのでプロジェクトからは除外しています。
+    プロジェクトにNuGetでインストールしてください。
+       ILNumerics http://ilnumerics.net/
+       NuGet ILNumerics32Bit  http://nuget.org/packages/ILNumerics.32Bit/
+
+(2013-06-13)
+  Visual Studio 2012でビルド
+
+  wg2d_periodicバグ修正
+     superdiagonal と subdiagonalが異なるとき計算が間違っていました。
+     ただ、扱っている問題では常にsuperdiagonalとsubdiagonalは同じサイズなので計算結果に影響はありません。
+     
+(2013-04-12)
+  photonic_band追加
+    正方格子
+      誘電体ロッド TE(TMz)モード
+      問題0
+    三角形格子
+      エアホール TM(TEz)モード
+      問題1: 平行四辺形領域
+      問題2: 長方形領域(スーパーセル)  "folded" band
+      問題3: 長方形領域(1/2)
+      問題4: 六角形領域
+    
+(2013-03-31)
+  サンプル追加
+    wg2d_periodic
+      方向性結合器、トリプレクサ、共振器(3ポートフィルタ)
+
+(2013-03-03)
+  サンプル追加
+    wg2d_periodic
+      90°ダブルベンド（問題16）
+
+(2013-02-11)
+  サンプル追加
+    wg2d_periodic
+      60°三角形格子の60°ベンド(問題14)
+      60°三角形格子の90°ベンド(結合共振器光導波路:CROWとの接続) (問題15)
+
+(2013-01-21)
+  サンプル追加
+    三角形格子の分散特性を計算する為に実装したものを公開します。
+    PC導波路固有モードの判定方法を電力ベース、領域全体対象に変更(以前は境界上だけで判定していた)
+    モード追跡を試し実装(基本モード伝搬定数が常に一番大きいとは限らないので)
+    ソース整理：問題毎にファイル分けするようにして、問題を追加しやすいようにしました。
+    
+    wg2d_periodic_eigen_k (新規)
+      周期構造導波路固有値解析(βを与えてk0を求める方法)
+        isSVW: false (既定値)  界の境界条件にブロッホの定理を適用する方法
+        isSVW: true            Φ(x, y) = φ(x, y)exp(-jβx)と置く方法(wg2d_periodic_eigenの方法)
+        　　http://ryujimiya.hatenablog.com/entry/2013/01/16/074832
+        
+    wg2d_periodic_eigen
+      三角形格子PC欠陥導波路を追加
+      　　http://ryujimiya.hatenablog.com/entry/2013/01/21/003924
+    wg2d_periodic
+      三角形格子PC欠陥導波路　直線 伝達問題
+      三角形格子PC欠陥導波路　ベンド　伝達問題
+      　　http://ryujimiya.hatenablog.com/entry/2013/01/21/021129
+
+(2012-12-30)
+  サンプル追加
+    wg2d_periodic
+      (10) フォトニック結晶導波路マルチモード干渉器(MMI:multi-mode interference)
+      (11) フォトニック結晶導波路マルチモード干渉器分波器(MMI DEMUX)
+(2012-12-26)
+  サンプル追加
+    wg2d_periodic_eigen
+      フォトニック結晶導波路2チャンネルカプラ―の固有モード(結合部1ロッドの場合)
+          http://ryujimiya.hatenablog.com/entry/2012/12/26/185740
+    wg2d_periodic
+      (4)-(7) フォトニック結晶2チャンネルカプラー直線導波路
+          http://ryujimiya.hatenablog.com/entry/2012/12/23/161148
+      (8)-(9) フォトニック結晶導波路方向性結合器
+
+(2012-12-19)
+  DelFEM4Net.dll version1.0.0.7 (DelFEM1.2.3Modified_20121219 ベースのライブラリをリンク)
+  サンプル追加
+    wg2d_periodic
+      周期構造導波路の伝達問題
+        (0) 直線導波管の散乱係数周波数特性(動作確認用)
+        (1) フォトニック結晶直線導波路の散乱係数周波数特性(動作確認用)
+          http://ryujimiya.hatenablog.com/entry/2012/12/15/061142
+        (2) フォトニック結晶90°ベンド導波路（直角コーナー)の散乱係数周波数特性
+        (3) フォトニック結晶90°ベンド導波路（ロッドを１つずらしたもの)の散乱係数周波数特性
+          http://ryujimiya.hatenablog.com/entry/2012/12/15/154222
+   その他
+     KrdLab.LisysのCLW.dllを更新
+
+(2012-12-13)
+  フォトニック結晶導波路モード解析の精度を上げた。(ロッドのメッシュ切りを改善)
+
+(2012-11-30)
+  サンプル追加
+    wg2d_periodic_eigen
+      周期構造２次元導波路の固有値問題(TEモードまたはTMモード)のサンプルです。下記のサンプルがあります。
+        導波管の固有モード
+          http://ryujimiya.hatenablog.com/entry/2012/11/26/003737
+        誘電体スラブ導波路の固有モード
+          http://ryujimiya.hatenablog.com/entry/2012/11/28/015112
+        フォトニック結晶導波路の固有モード
+          http://ryujimiya.hatenablog.com/entry/2012/11/29/041704
+
+(2012-11-25)
+  サンプル修正
+    wg2d  PCOCG ILU(1)で計算するように変更。また分割を細かくした。
+
+(2012-10-15)
+  サンプル修正
+    wg2d  CLW.dllを更新
+
+(2012-10-11)
+  サンプル修正
+    wg2d  不要な処理を削除、行列のパターン追加処理を書き直し
+(2012-10-06)
+  DLL version1.0.0.4
+  サンプル追加
+     fluid2d ２次元流体
+     scalar2d     スカラー型の方程式 2次元
+                    (ポアソン方程式、拡散方程式、静的移流拡散方程式、動的移流拡散方程式)
+     scalar3d     スカラー型の方程式 3次元
+     solid3d      固体方程式 ３次元
+   wg2d
+     誘電体媒質に対応 誘電体装荷共振器サンプル追加
+
+(2012-10-05)
+  DLL version1.0.0.3 対応
+  サンプル追加
+    cd2d_edit        ２次元CAD編集
+    cad3d            ３次元CAD
+    field_evaluate   場の表示
+    msh_view         メッシュ表示
+    rigid            剛体
+
+(2012-10-01)
+  BUGFIX
+    wg2dで固有モードの計算の定式化でβ^2の符号が逆だったのを修正。
+    いままでは複素共役の解を採用していたようです。
+
+(2012-9-29)
+  BUGFIX
+    wg2dでout of memoryが発生していたがこれを修正（DelFEM4Netの不具合を修正し再リンク)
+
+(2012-9-25)
+  H面導波管伝達問題のサンプルを追加
+     wg2d
+       このサンプルはりゅうじみやのオリジナルです。
+       H面導波管ベンドの散乱パラメータ周波数特性を解析しています。
+     
+       なお、このアプリでは固有値解析にKrdLab氏作Losysを使用しています。
+       KrdLabの不定期日記 Lisys http://d.hatena.ne.jp/KrdLab/20090507
+
+(2012-9-23)
+  移植したアプリ：
+    DelFEM/test_glut/solid2d/
+      ２次元固体のFEM解析です。
+      スペースキーを押すと解析対象が変わります。
+      アニメーションを一時停止/再開するには、「a」を押してください。
+    DelFEM/test_glut_low_lev/solid2d/
+      同じく２次元固体のFEM解析です。
+      低レベルのI/Fを使用しています。解析部分を独自実装する場合の参考になると思います。
+
+  その他：
+     DelFEM/include/gl_utility.hをC#に移植しました。
+     DelFEMサンプルで使用しているShowFPSに対応するためです。
+
+(2012-9-22)
+  移植したアプリ:
+    DelFEM/test_glut/cad2d
+      ２次元CADです。
+      DelFEMで作成した図面を見ることができます。
+      スペースキーを押すと図面が変わります。
+

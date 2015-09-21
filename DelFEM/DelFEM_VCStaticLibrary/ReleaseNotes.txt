@@ -1,0 +1,25 @@
+﻿/////////////////////////////////////////////////////////////////////////////////
+DelFEMスタティックライブラリ(dfm.lib)
+
+source created by Nobuyuki Umetani
+compliled by rujimiya (りゅうじみや)
+  e-mail:ryujimiya(あっと)mail.goo.ne.jp
+/////////////////////////////////////////////////////////////////////////////////
+
+DelFEM4Net用にVisual C++ 2010でコンパイルしたスタティックリンクライブラリです。
+
+■ ベースにしたDelFEM
+   DelFEM1.2.3.zip
+
+
+■ 主な変更点
+
+(2012-8-28)
+・CCadObj2Dで辺と頂点に色をセットできるように変更しました。
+
+(2012-12-19)
+  CZMatDia_BlkCrs::AddPatternを複数回実行するとパターンの追加に失敗する現象の対応
+  
+(2013-06-13)
+  Visual Studio 2012でビルド
+  名称を dfm.lib → DelFEMsl.lib に変更

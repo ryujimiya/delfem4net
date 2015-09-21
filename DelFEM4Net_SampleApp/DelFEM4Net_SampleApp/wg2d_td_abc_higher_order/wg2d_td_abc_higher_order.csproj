@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA317345-319E-432C-8DA7-29997758DEA6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wg2d_td_abc_higher_order</RootNamespace>
+    <AssemblyName>wg2d_td_abc_higher_order</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\apps\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CLW">
+      <HintPath>..\..\..\Lisys\Lisys-0.6.4-src\Release\CLW.dll</HintPath>
+    </Reference>
+    <Reference Include="DelFEM4Net">
+      <HintPath>..\..\..\..\C++\DelFEM4Net\DelFEM4Net\Release\DelFEM4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics32">
+      <HintPath>..\packages\ILNumerics.32Bit.2.14.4735.552\lib\ILNumerics32.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tao.FreeGlut">
+      <HintPath>..\..\..\..\..\download\VC#\Tao-1.2.0-1\bin\Tao.FreeGlut.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl">
+      <HintPath>..\..\..\..\..\download\VC#\Tao-1.2.0-1\bin\Tao.OpenGl.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl.ExtensionLoader">
+      <HintPath>..\..\..\..\..\download\VC#\Tao-1.2.0-1\bin\Tao.OpenGl.ExtensionLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.OpenGl.Glu">
+      <HintPath>..\..\..\..\..\download\VC#\Tao-1.2.0-1\bin\Tao.OpenGl.Glu.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Platform.Windows">
+      <HintPath>..\..\..\..\..\download\VC#\Tao-1.2.0-1\bin\Tao.Platform.Windows.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Edge.cs" />
+    <Compile Include="GlutUtility.cs" />
+    <Compile Include="Loop.cs" />
+    <Compile Include="MainLogic.cs" />
+    <Compile Include="MediaInfo.cs" />
+    <Compile Include="MyMatrixUtil.cs" />
+    <Compile Include="Problem00.cs" />
+    <Compile Include="Problem01.cs" />
+    <Compile Include="Problem02.cs" />
+    <Compile Include="Problem03.cs" />
+    <Compile Include="Problem03_0.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WgCadUtil.cs" />
+    <Compile Include="WgUtil.cs" />
+    <Compile Include="WgUtilForTD.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libiomp5md.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mkl_custom32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
